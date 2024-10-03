@@ -8,14 +8,13 @@ function fetchW(place, latitude, longitude) {
         })
         .then((data) => {
             const article = document.getElementById(place); 
-            if (article) {
                 const body = article.querySelector('.data'); 
                 body.innerHTML = `Temperature: ${data.current_weather.temperature} ${data.current_weather_units.temperature} <br>
                                   Weather Code: ${data.current_weather.weathercode} ${data.current_weather_units.weathercode} <br>
                                   Time: ${data.current_weather.time} ${data.current_weather_units.time} <br>
                                   Wind Direction: ${data.current_weather.winddirection} ${data.current_weather_units.winddirection} <br>
                                   Wind Speed: ${data.current_weather.windspeed} ${data.current_weather_units.windspeed}`;
-            }
+            
         })
         
 }
